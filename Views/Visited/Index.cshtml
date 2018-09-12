@@ -1,10 +1,10 @@
 <h1>Places You've Been.</h1>
-@foreach(var Places in Model)
+@foreach(var newPlaces in Model)
 {
-<p><a href="/Visited/@Places.GetId()">Place: @newPlaces.GetLocation() During: @newPlaces.GetDate()</a>
+<p><a href="/@Places.GetId()">Place: @Places.GetLocation() During: @Places.GetDate()</a>
 </p>
 <br>
-<p>The date you were there was:
+<p>The date you were there was:@Request.Form["location"], @Request.Form["date"]
 </p>
 }
-<a href='/'>Add a new place</a>
+<a href='/Home/Index'>Add a new place</a>

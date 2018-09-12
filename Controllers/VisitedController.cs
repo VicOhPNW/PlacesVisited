@@ -14,21 +14,20 @@ namespace PlacesVisited.Controllers
       return View(allPlaces);
     }
 
-    // [HttpGet("/Visited/{id}")] //Requests
-    // public ActionResult VisitedPlaces(int id)
-    // {
-    //   Places newPlace = Places.Find(id);
-    //   return View(newPlace);
-    // }
-    [HttpPost("/Visited/{id}")] //Alters
+    [HttpGet("/Visited/{id}")] //Requests
     public ActionResult VisitedPlaces(int id)
     {
-      string location = Request.Form["location"];
-      string date = Request.Form["date"];
-      Places newPlaces = new Places(location, date);
-      List <Places> allPlaces = Places.GetAll();
-      allPlaces.Save();
+      Places newPlace = Places.Find(id);
+      return View(newPlace);
     }
+
+    [HttpGet("/Visited/add")]
+    public ActionResult Save()
+    {
+      return View();
+    }
+
+    
 
 
   }

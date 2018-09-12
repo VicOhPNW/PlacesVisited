@@ -10,9 +10,23 @@ namespace PlacesVisited.Controllers
   [HttpGet("/")]
   public ActionResult Index()
   {
-
-    return View();
+    List <Places> allPlaces = Places.GetAll();
+    return View(allPlaces);
+  }
+  [HttpGet("/Home/Index/{id}")]
+  public ActionResult Details(int id)
+  {
+    Places place= Places.Find(id);
+    return View(place);
   }
 
+  [HttpPost("/Visited/{id}")] //Alters
+  public ActionResult VisitedPlaces()
+  {
+    Places newPlaces = new Places(Request.Form["location"], Request.Form["date"]);
+    List <Places> allPlaces = Places.GetAll();
+    // newPlaces.Save();
+    return View("/Index", allPlaces);
+  }
   }
 }
