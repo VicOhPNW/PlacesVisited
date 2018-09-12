@@ -1,0 +1,4 @@
+/Users/Guest/Desktop/Places.Solutions/Places/bin/Debug/netcoreapp1.1/PlacesVisited.deps.json
+/Users/Guest/Desktop/Places.Solutions/Places/bin/Debug/netcoreapp1.1/PlacesVisited.runtimeconfig.json
+/Users/Guest/Desktop/Places.Solutions/Places/bin/Debug/netcoreapp1.1/PlacesVisited.runtimeconfig.dev.json
+/Users/Guest/Desktop/Places.Solutions/Places/obj/Debug/netcoreapp1.1/PlacesVisited.AssemblyInfo.cs

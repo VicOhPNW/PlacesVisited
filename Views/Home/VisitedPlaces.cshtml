@@ -1,0 +1,9 @@
+<h1>Places You've Been.</h1>
+@foreach(var newPlaces in Model)
+{
+<p>You've been: @newPlaces.GetLocation() .
+</p>
+<br>
+<p>The date you were there was: @newPlaces.GetDate()
+</p>
+}
